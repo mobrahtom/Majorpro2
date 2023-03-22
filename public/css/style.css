@@ -1,0 +1,499 @@
+*{
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+  
+}
+body{
+  
+  background: #f6f3f3;
+  width: 100%;
+
+}
+
+.container-fluid{
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  }
+  
+.navbar{
+  position: fixed;
+  right:0;
+    height: 80px;
+    width:100%;
+   background-attachment: fixed;
+   z-index: 999;
+    background: lightgray;
+  
+  
+}
+/* Add some space between the links */
+.navbar .navbar-nav .nav-link {
+    margin-left: 1em;
+    
+  }
+  .navbar-toggler-icon{
+    position: fixed;
+    right: 0;
+    
+  }
+  
+  /* Align the links to the right */
+  .navbar .navbar-nav {
+    justify-content: flex-end;
+  
+  
+  }
+/* Position the logo at the top left of the navbar */
+.navbar-brand  {
+    position: fixed;
+    top: 0;
+    margin-left: 30px;
+    z-index: 999;
+    
+  }
+  .navbar-nav{
+    margin-top: 10px;
+   position:fixed; 
+    margin-left: 8em;
+    right: 250px;
+    
+  }
+  
+  
+  .nav-item .nav-link  {
+   font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+    color:gray;
+    z-index: 999;
+  }
+
+  .form-inline {
+    position: relative;
+  }
+  
+  .form-control {
+    width: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    box-shadow: none;
+    background-color: transparent;
+    float: left;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .search-icon {
+    position: relative;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+ 
+  @media (max-width: 767px) {
+    .navbar {
+      background-color:gray;
+      position: fixed;
+      right: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 70px;
+      height: 400px;
+      z-index: 999;
+    }
+
+
+    .navbar .navbar-nav {
+      flex-direction: column;
+     
+    }
+
+    .navbar .navbar-nav .nav-link {
+      margin-bottom: 0.5rem;
+    }
+    .navbar-brand{
+      margin-right: 30%;
+    }
+    .navbar-toggler-icon{
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      right: 30px;
+      
+    }
+    
+  }
+  
+  
+/* Add css for Images sliding on home page*/
+
+.slider-content{ 
+  width: 104%; 
+  margin-left: -27px;
+  
+} 
+ 
+.slide-img{ 
+width: 100%; 
+height: 180px; 
+position: relative;
+} 
+ 
+.slide-img img{ 
+width: 100%; 
+height: 100%; 
+object-fit:fill; 
+} 
+.detail-box{ 
+width: 100%; 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+padding: 10px 20px; 
+box-sizing: border-box; 
+font-family: calibri; 
+} 
+ 
+ 
+@keyframes fade{ 
+0%{ 
+  opacity: 0; 
+} 
+100%{ 
+  opacity: 1; 
+} 
+} 
+#slick{ 
+width:100%; 
+height: 100vh; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+} 
+ 
+.col-lg-12{ 
+
+width: 100%; 
+height: 100px; 
+margin: 0px; 
+display: block; 
+height: 100vh; 
+} 
+ 
+ 
+ 
+.slide-img { 
+  width: 100%; 
+  height: 100vh; 
+} 
+.arrow_prev { 
+position: absolute; 
+top: 50%; 
+left: 2%; 
+visibility: visible; 
+} 
+.arrow_prev span { 
+font-size: 25px; 
+color: red; 
+border: 1px solid red; 
+display: block; 
+width: 50px; 
+height: 50px; 
+text-align: center; 
+line-height: 50px; 
+cursor: pointer; 
+ 
+} 
+ 
+.arrow_next { 
+position: absolute; 
+top: 50%; 
+right: 2%; 
+visibility: visible; 
+} 
+.arrow_next span { 
+ font-size: 25px; 
+ color: red; 
+ border: 1px solid red; 
+ display: block; 
+ width: 50px; 
+ height: 50px; 
+ text-align: center; 
+ line-height: 50px; 
+ cursor: pointer; 
+} 
+ 
+
+  
+ 
+
+
+
+/* --------------- CSS for Video testimonilas---------*/
+video {
+  position: relative;
+  overflow: hidden;
+  width: 80%; 
+  margin: 0 auto; 
+  height: auto;
+ 
+
+}
+
+
+/*       CSS for Discover Ethiopia      */
+
+h1 {
+  font-size: 5em;
+  font-weight: bold;
+  color: rgb(0,0,0);
+}
+
+.line {
+  width: 7%;
+  margin: 0 auto;
+  height: 5px;
+  background:linear-gradient(green,yellow,red);
+  
+}
+p.discover {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: justify;
+  color: #555;
+  padding: 1em;
+  width:70%;
+  margin: 0 auto;
+  
+}
+
+
+
+/*-----------list of places--------*/
+
+#place{
+ padding:50px 0; 
+}
+.place-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+  grid-gap:40px;
+  margin-top: 40px;
+}
+.placess{
+  border-radius: 10px;
+  position: relative;
+  overflow:hidden;
+}
+.placess img{
+  width:100%;
+  border-radius: 10px;
+  display:block;
+  transition: transform 0.5s;
+  height: 300px;
+}
+.layer{
+  width:100%;
+  height:0%;
+  background: linear-gradient(red,yellow,green);
+  border-radius:10px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:0 40px;
+  text-align:center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3{
+  font-weight: 500;
+  margin-bottom:20px;
+  color:green;
+}
+.layer a{
+  margin-top:20px;
+  color:#c2bebe;
+  text-decoration:none;
+  font-size:18px;
+  line-height:60px;
+  background: #fff;
+  width:60px;
+  height:60px;
+  border-radius: 50px;
+  text-align:center;
+}
+.placess:hover img{
+transform:scale(1.1);
+}
+.placess:hover .layer{
+  height:100%;
+
+}
+
+
+
+
+
+
+    /* -------------------------CSS for FOOTTER Part-----------------------------*/
+    footer {
+      background: rgb(101, 101, 250); 
+      /* color: white; */
+      display: flex;
+      justify-content: space-between;
+      padding: 4px;
+      position: relative;
+      bottom: 0;
+      width: 102%;
+      height: auto;
+    }
+    
+    footer h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    footer ul li {
+      padding: 5px;
+      margin: 10px;
+    }
+    
+    footer ul li a {
+      color: white; 
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+     
+    }
+    
+    footer ul li a:hover {
+       color: #ddd; 
+    }
+    
+    .social-icons li {
+      display: inline-block;
+      padding: 2px; 
+      transition: 0.5s;
+      transform: scale(1.2);
+    }
+    
+    .social-icons li a {
+      color: white; 
+      font-size: 20px;
+    }
+    
+    .social-icons li a:hover {
+       color: #ddd; 
+      transition: 0.5s;
+      transform: scale(1.5);
+    }
+    
+    /* styles for the contact us section */
+    footer h3.contact-us {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    
+    footer form {
+      /* styles for the form element */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    footer form label {
+      /* styles for the form label */
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+    
+    footer form textarea {
+      /* styles for the textarea element */
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      resize: none;
+      font-size: 1.2rem;
+    }
+    
+    footer form input[type="submit"] {
+      /* styles for the submit button */
+      background-color: rgb(161, 161, 245); 
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    
+    footer form input[type="submit"]:hover {
+      /* styles for the submit button on hover */
+      background-color: #ddd;
+      color: green;
+    }
+    /* styles for the copyright section */
+    .copyright {
+      text-align: center;
+      padding: 10px 0;
+      background:linear-gradient(green,yellow,red);
+      color: blue;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      width:102%
+    }
+    
+    .copyright a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    
+    .copyright a:hover {
+      color: #ddd;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    input[type="email"] {
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+  
+
+    

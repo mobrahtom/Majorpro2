@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/e5c1ddf372.js" crossorigin="anonymous"></script>
+  
+
+  <style>
+    *{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+}
+.filterDiv{
+    float: right;
+   color: black;
+   width: 80%;
+   text-align: center;
+   margin: 2px;
+   display: none;
+   margin-top:100px;
+    
+}
+.show {
+    display: block;
+  }
+.bar{
+    height: 80px;
+    background-color:blueviolet;
+    width: 100%;
+    margin-top:0;
+    position: fixed;
+    z-index: 9999;
+   
+}
+.log{
+float:right;
+margin-top: 10px;
+margin-right: 20px;
+background-color: red;
+
+    
+}
+.icon{
+    font-size: 30px;
+    color:red;
+    float:right;
+    margin-right: 50px;
+}
+.bar img{
+    width:50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#filter{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 20px;
+    top :90px;
+    width:20%;
+    height: 300px;
+    
+    
+}
+
+.btn i{
+    margin-right: 5px;
+}
+.btn{
+margin-bottom: 5px;
+}
+.btn:hover{
+    background-color: aqua;
+}
+
+.display-box{
+    position:relative;
+    right:0;
+    top:20px;
+    background:white;
+    width:70%;
+    padding: 30px; 
+    margin-right: 5px;
+    
+}
+.row{
+    display: block;
+    background-color: white;
+}
+.profile-box{
+    position: relative;
+    display: flex;
+    background-color: rebeccapurple;
+    width:100%;
+    height: auto;
+}
+.header{
+    width: 100%;
+    margin-bottom: 20px;
+    align-self: center;
+}
+#photo_box{
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(215, 204, 204);
+   
+}
+#photo_box i{
+ position: relative;
+ top:40px;
+ left:30px;
+ font-size: 100px;
+}
+.desc{
+    width: 400px;
+    padding-left: 10px;
+    height: 150px;
+    margin-top: 20px;
+
+}
+.desc{
+ margin-top: 80px;
+}
+.img-fluid {
+    max-width: 200px;
+    height: auto;
+  }
+
+  /* css for info page*/
+  .info-page{
+    width:100%;
+    background: white;
+  }
+  .form-group{
+    display: flex;
+  }
+  .form-group label{
+    width: 20%;
+  }
+  .form-group input{
+    width:50%;
+  }
+  .error{
+    color:red;
+    display: none;
+  }
+
+
+  /* Css for Visa page*/
+
+  .imageBox{
+    background: url("./Image/visa.jpg");
+    width:100%;
+    height: 460px;
+    margin-top: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.imageBox h2{
+    font-size: 50px;
+    position:fixed;
+    bottom: 100px;
+    color: green;
+}
+p{
+    width: 80%;
+    padding-top: 80px;
+    line-height:inherit;
+    font-style: oblique;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.btn a{
+    color: white;
+}
+
+  
+
+  
+  </style>
+  
+  <script >
+
+
+//This is javaScript file
+filterSelection("info")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+  </script>
+</head>
+<body>
+  
+  <header class="bar">
+    
+    <img src="./Image/logo.png" alt="Logo">
+    <div class="icon">
+    <i class="fa-sharp fa-solid fa-heart"></i>
+  </div>
+    <button class="btn btn-red btn defualt log">logout</button>
+
+  </header>
+
+  
+  <div id="filter">
+   <!-- <button class="btn active" onclick="filterSelection('all')"><i class="fa-solid fa-chart-simple"></i> Dashboard</button>--> 
+    <button class="btn" onclick="filterSelection('info')"><i class="fa-solid fa-circle-info"></i> Information</button>
+    <button class="btn" onclick="filterSelection('destination')"><i class="fa-solid fa-location-dot"></i> Destination</button>
+    <button class="btn" onclick="filterSelection('visa')"><i class="fa-brands fa-cc-visa"></i> Apply Visa </button>
+    <button class="btn" onclick="filterSelection('hotel')"><i class="fa-solid fa-hotel"></i> Order Hotel</button>
+    <button class="btn" onclick="filterSelection('guide')"><i class="fa-solid fa-person"></i> Order Guide</button>
+    <button class="btn" onclick="filterSelection('flight')"><i class="fa-solid fa-plane"></i> Book flight</button>
+    <button class="btn" onclick="filterSelection('recommend')"><i class="fa-solid fa-landmark"></i>  Recommended</button>
+    <button class="btn" onclick="filterSelection('wish')"> <i class="fa-solid fa-heart"></i> My wishList</button>
+
+  </div>
+
+
+
+
+<div class="container">
+  
+  <div class=" filterDiv info">
+    <div class="row">
+      
+      <h2 class="text-center header">Edit Infomrmation</h2>
+      <div class="profile-box">
+      <div class="col-md-3  well"id="photo_box">
+        <img src="#" class="rounded-circle mx-auto img-fluid" alt="Profile Picture">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+      </div>
+      <div class="desc">
+        <button class="btn btn-primary">Choose file</button>
+        <p>  Update your profile</p>
+      </div>
+      
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="info-page">
+        <h2 class="header">Account information</h2>
+        <form id="profileForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" value="John">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" value="Doe">
+          </div>
+          <h2 class="header"> Change Password</h2>
+          <div class="form-group">
+            
+            <label for="oldPassword">Old Password</label>
+            <input type="password" class="form-control" id="oldPassword">
+            <span class="error" id="oldPasswordError"></span>
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" class="form-control" id="newPassword">
+            <span class="error" id="newPasswordError"></span>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword">
+            <span class="error" id="confirmPasswordError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+      
+      
+    </div>
+ </div>
+
+
+
+ <div class=" filterDiv destination">
+
+  <!-- Sample-->
+  <p> sample</p>
+ </div>
+ 
+ <div class="filterDiv visa">
+
+  <div class=" row imageBox ">
+    <h2>Get your visa</h2>
+    </div>
+
+
+
+    <div class="row">
+    <p>
+    All visitors to Ethiopia require visas. The only exceptions are nationals from Djibouti and Kenya and travelers who arrive at Addis Ababa Bole International Airport to catch a connecting flight.
+
+    Ethiopian Visa can be collected at Ethiopian Embassies and consulates abroad or on Arrival. Right now visa can be obtained with an online application. Check <a href="https://www.evisa.gov.et/">this link </a> for all visa-related details and to apply for an online Visa.<p>
+        </p>
+        <button class="btn btn-default btn-primary"><a href="https://www.evisa.gov.et/">Apply online</a></button>
+    </div>
+ </div>
+
+ 
+
+ <div class=" filterDiv hotel">
+
+  <!-- Sample-->
+  <p> hotel sample</p>
+ </div>
+
+
+ 
+
+ <div class=" filterDiv guide">
+
+   <div class=" row imageBox" style="background: url('./Image/guide.webp');">
+        <h2>Meet Your tour Operator</h2>
+        </div>
+
+
+
+        <div class="row">
+            <p>
+                There are more than 500 legally registered Tour Operators in Ethiopia.
+                 Meet all the Tour operators here: <a href="https://www.ethiopiantourassociation.com/">https://www.ethiopiantourassociation.com/ </a>
+                 and <a href="https://www.stoa-ethiopia.org/"> https://www.stoa-ethiopia.org/</a>
+            </p>
+        
+        </div>
+ </div>
+
+ <div class="filterDiv flight">
+  <div class=" row imageBox " style="background: url('./Image/guide.webp');">
+    <h2>Get your Flight ticket</h2>
+    </div>
+
+    <div class="row">
+    <p>
+        Book your trip to Ethiopia with one of the renowned and successful airlines;
+         Ethiopian who has more than 125 destinations across the globe.
+        Book your flight here: <a href="https://www.ethiopianairlines.com/aa">https://www.ethiopianairlines.com/aa</a>
+        </p>
+        <button class="btn btn-default btn-primary"><a href="https://www.ethiopianairlines.com/aa">Book Online</a></button>
+    </div>
+ </div>
+
+
+ <div class=" filterDiv recommend">
+
+  <h1>Recomendation</h1>
+ </div>
+
+ <div class=" filterDiv wish">
+
+  <h1>wishList</h1>
+ </div>
+
+ 
+ 
+</div>
+</body>
+</html>

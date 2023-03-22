@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+}
+.filterDiv{
+    float: right;
+   color: black;
+   width: 80%;
+   text-align: center;
+   margin: 2px;
+   display: none;
+   margin-top:100px;
+    
+}
+.show {
+    display: block;
+  }
+.bar{
+    height: 80px;
+    background-color:blueviolet;
+    width: 100%;
+    margin-top:0;
+    position: fixed;
+    z-index: 9999;
+   
+}
+.log{
+float:right;
+margin-top: 10px;
+margin-right: 20px;
+background-color: red;
+
+    
+}
+.icon{
+    font-size: 30px;
+    color:red;
+    float:right;
+    margin-right: 50px;
+}
+.bar img{
+    width:50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#filter{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 20px;
+    top :90px;
+    width:20%;
+    height: 300px;
+    
+    
+}
+
+.btn i{
+    margin-right: 5px;
+}
+.btn{
+margin-bottom: 5px;
+}
+.btn:hover{
+    background-color: aqua;
+}
+
+.display-box{
+    position:relative;
+    right:0;
+    top:20px;
+    background:white;
+    width:70%;
+    padding: 30px; 
+    margin-right: 5px;
+    
+}
+.row{
+    display: block;
+    background-color: white;
+}
+.profile-box{
+    position: relative;
+    display: flex;
+    background-color: rebeccapurple;
+    width:100%;
+    height: auto;
+}
+.header{
+    width: 100%;
+    margin-bottom: 20px;
+    align-self: center;
+}
+#photo_box{
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(215, 204, 204);
+   
+}
+#photo_box i{
+ position: relative;
+ top:40px;
+ left:30px;
+ font-size: 100px;
+}
+.desc{
+    width: 400px;
+    padding-left: 10px;
+    height: 150px;
+    margin-top: 20px;
+
+}
+.desc{
+ margin-top: 80px;
+}
+.img-fluid {
+    max-width: 200px;
+    height: auto;
+  }
+
+  /* css for info page*/
+  .info-page{
+    width:100%;
+    background: white;
+  }
+  .form-group{
+    display: flex;
+  }
+  .form-group label{
+    width: 20%;
+  }
+  .form-group input{
+    width:50%;
+  }
+  .error{
+    color:red;
+    display: none;
+  }
+
+
+  /* Css for Visa page*/
+
+  .imageBox{
+    background: url("../Image/visa.jpg");
+    width:100%;
+    height: 460px;
+    margin-top: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.imageBox h2{
+    font-size: 50px;
+    position:fixed;
+    bottom: 100px;
+    color: green;
+}
+p{
+    width: 80%;
+    padding-top: 80px;
+    line-height:inherit;
+    font-style: oblique;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.btn a{
+    color: white;
+}
+
+  
+
+  

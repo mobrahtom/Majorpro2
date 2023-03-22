@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* the above is additional */
+
+body{
+  font-family: sans-serif;
+  /* the above is additional */
+  background: url("Image/danakil\ depression.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.container{
+  box-shadow: rgba(7, 43, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px 20px;
+  /* width: fit-content; */
+  background-color: white;
+ 
+  padding: 50px;
+  margin: 10px auto;
+ 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  /* max-width: 400px; */
+
+  padding: 50px;
+}
+ .container h2 {
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+/* this is additional in between */
+form div input, select{
+  /* height: 40px; */
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); */
+}
+/* this is additonal in between */
+label,select{
+  display: inline-block;
+  width: 130px;
+  
+}
+input{
+    width: 300px;
+    height: 30px;
+}
+
+#male {
+  width:22px;
+  height: 22px;
+  margin-left: 20px;
+}
+
+#female {
+  width: 22px;
+  height: 22px;
+  margin-left: 20px;
+}
+
+select{
+  width: 300px;
+  height: 30px;
+}
+/*text-align: right;*/
+
+form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border: 2px solid #f2796e;
+}
+
+form div i {
+  position: absolute;
+  padding: 10px;
+}
+
+.success-icon,
+  .failure-icon {
+    right: 0;
+    opacity: 0;
+  }
+  
+  .failure-icon,
+  .error {
+    color: red;
+  }
+  
+  .success-icon {
+    color: green;
+  }
+
+  .error {
+    font-size: 14.5px;
+    margin-top: 5px;
+  }
+  
+   #checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 17px;
+    
+   }
+
+#submit {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin-left: 40px;
+}
+
+
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /**
+  * ! Media Queries are here
+  **/
+  
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    form,
+    .content {
+      width: 100%;
+    }
+  
+  
+  }
+  
+  @media (max-width: 425px) {
+    form {
+      padding: 20px;
+    }
+  }

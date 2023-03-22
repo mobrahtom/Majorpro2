@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/e5c1ddf372.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../public/css/account.css">
+  
+  <script src="../public/js/account.js"></script>
+</head>
+<body>
+  
+  <header class="bar">
+    
+    <img src="../public/Image/logo.png" alt="Logo">
+    <div class="icon">
+    <i class="fa-sharp fa-solid fa-heart"></i>
+  </div>
+    <button class="btn btn-red btn defualt log">logout</button>
+
+  </header>
+
+  
+  <div id="filter">
+   <!-- <button class="btn active" onclick="filterSelection('all')"><i class="fa-solid fa-chart-simple"></i> Dashboard</button>--> 
+    <button class="btn" onclick="filterSelection('info')"><i class="fa-solid fa-circle-info"></i> Information</button>
+    <button class="btn" onclick="filterSelection('destination')"><i class="fa-solid fa-location-dot"></i> Destination</button>
+    <button class="btn" onclick="filterSelection('visa')"><i class="fa-brands fa-cc-visa"></i> Apply Visa </button>
+    <button class="btn" onclick="filterSelection('hotel')"><i class="fa-solid fa-hotel"></i> Order Hotel</button>
+    <button class="btn" onclick="filterSelection('guide')"><i class="fa-solid fa-person"></i> Order Guide</button>
+    <button class="btn" onclick="filterSelection('flight')"><i class="fa-solid fa-plane"></i> Book flight</button>
+    <button class="btn" onclick="filterSelection('recommend')"><i class="fa-solid fa-landmark"></i>  Recommended</button>
+    <button class="btn" onclick="filterSelection('wish')"> <i class="fa-solid fa-heart"></i> My wishList</button>
+
+  </div>
+
+
+
+
+<div class="container">
+  
+  <div class=" filterDiv info">
+    <div class="row">
+      
+      <h2 class="text-center header">Edit Infomrmation</h2>
+      <div class="profile-box">
+      <div class="col-md-3  well"id="photo_box">
+        <img src="#" class="rounded-circle mx-auto img-fluid" alt="Profile Picture">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+      </div>
+      <div class="desc">
+        <button class="btn btn-primary">Choose file</button>
+        <p>  Update your profile</p>
+      </div>
+      
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="info-page">
+        <h2 class="header">Account information</h2>
+        <form id="profileForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" value="John">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" value="Doe">
+          </div>
+          <h2 class="header"> Change Password</h2>
+          <div class="form-group">
+            
+            <label for="oldPassword">Old Password</label>
+            <input type="password" class="form-control" id="oldPassword">
+            <span class="error" id="oldPasswordError"></span>
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" class="form-control" id="newPassword">
+            <span class="error" id="newPasswordError"></span>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword">
+            <span class="error" id="confirmPasswordError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </div>
+      
+      
+    </div>
+ </div>
+
+
+
+ <div class=" filterDiv destination">
+
+  <!-- Sample-->
+  <p> sample</p>
+ </div>
+ 
+ <div class="filterDiv visa">
+
+  <div class=" row imageBox ">
+    <h2>Get your visa</h2>
+    </div>
+
+
+
+    <div class="row">
+    <p>
+    All visitors to Ethiopia require visas. The only exceptions are nationals from Djibouti and Kenya and travelers who arrive at Addis Ababa Bole International Airport to catch a connecting flight.
+
+    Ethiopian Visa can be collected at Ethiopian Embassies and consulates abroad or on Arrival. Right now visa can be obtained with an online application. Check <a href="https://www.evisa.gov.et/">this link </a> for all visa-related details and to apply for an online Visa.<p>
+        </p>
+        <button class="btn btn-default btn-primary"><a href="https://www.evisa.gov.et/">Apply online</a></button>
+    </div>
+ </div>
+
+ 
+
+ <div class=" filterDiv hotel">
+
+  <!-- Sample-->
+  <p> hotel sample</p>
+ </div>
+
+
+ 
+
+ <div class=" filterDiv guide">
+
+   <div class=" row imageBox" style="background: url('../public/Image/guide.webp');">
+        <h2>Meet Your tour Operator</h2>
+        </div>
+
+
+
+        <div class="row">
+            <p>
+                There are more than 500 legally registered Tour Operators in Ethiopia.
+                 Meet all the Tour operators here: <a href="https://www.ethiopiantourassociation.com/">https://www.ethiopiantourassociation.com/ </a>
+                 and <a href="https://www.stoa-ethiopia.org/"> https://www.stoa-ethiopia.org/</a>
+            </p>
+        
+        </div>
+ </div>
+
+ <div class="filterDiv flight">
+  <div class=" row imageBox " style="background: url('../public/Image/plane.webp');">
+    <h2>Get your Flight ticket</h2>
+    </div>
+
+    <div class="row">
+    <p>
+        Book your trip to Ethiopia with one of the renowned and successful airlines;
+         Ethiopian who has more than 125 destinations across the globe.
+        Book your flight here: <a href="https://www.ethiopianairlines.com/aa">https://www.ethiopianairlines.com/aa</a>
+        </p>
+        <button class="btn btn-default btn-primary"><a href="https://www.ethiopianairlines.com/aa">Book Online</a></button>
+    </div>
+ </div>
+
+
+ <div class=" filterDiv recommend">
+
+  <h1>Recomendation</h1>
+ </div>
+
+ <div class=" filterDiv wish">
+
+  <h1>wishList</h1>
+ </div>
+
+ 
+ 
+</div>
+</body>
+</html>

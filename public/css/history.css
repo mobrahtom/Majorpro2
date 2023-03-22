@@ -1,0 +1,134 @@
+body {
+  background-image: url("pictures/backgorundshet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  display: block;
+  position: absolute;
+  right: 0.3em;
+  width: 100%;
+  height: 4.5em;
+  background-color: #009999; 
+  position: fixed;
+}
+#logo img{
+  display: block;
+  position: absolute;
+  top: 0.6em;
+  left: 1.6em;
+  width: 95px;
+  height: 50px;
+}
+
+#heading-text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+   color: #ffffff;
+  margin-top: 1.4em;
+  font-weight: bold;
+}
+
+.small-header {
+  display: block;
+  background-color: wheat;
+  margin-top: 3.3em;
+  width: 100%;
+  height: 0.5em;
+}
+
+#filter{
+    background-color: azure;
+    width: 15%;
+    height: 100vh;
+    margin: 4.5em 0 0 -6px;
+    float: left;
+    border: 1px solid #009999;
+    position: fixed;
+    text-align: center;
+}
+
+.general-info {
+  color: #ffffff;
+  background-color: darkorange;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px 0px 6px;
+  padding: 6px;
+}
+
+.filterDiv {
+  float: left;
+  background-color: #f6f3f3;
+  color: black;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  padding-right: 5px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container{
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    /* height: auto; */
+    
+}
+
+.container, .filterDiv {
+  margin: -8px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-attachment: fixed; 
+  line-height: normal;
+  font-size: large;
+  /* font-weight: bold; */
+  color: green;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  /* outline: none; */
+  padding: 12px 16px;
+  background-color: transparent;
+  color: blue;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #009999;
+ 
+  width: 100%;
+  color: white;
+}
+
+.btn:active {
+ background-color: darkkhaki;
+  color: white;
+}
+
+ .text {
+ font-size: large;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ float: left;
+ width: 75%;
+ background-color: white;
+ color: black;
+ padding-left: 14em;
+ padding-right: 20px;
+}
+
+
+#more {
+  display: none;
+}
+

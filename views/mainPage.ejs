@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Land of Habesha</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <!-- Coursel and fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!--  fontAwsome -->
+<script src="https://kit.fontawesome.com/e5c1ddf372.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  
+  <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="./Image/logo.png" width="70" height="60" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="mainPage">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Destination
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="HistoricNorth">Historic North</a>
+                      <a class="dropdown-item" href="#">Cultural South</a>
+                      <a class="dropdown-item" href="#">Natural East</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ThingsToDo
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="culture.html">Cultural Experience</a>
+                      <a class="dropdown-item" href="#">Nature Experience</a>
+                      <a class="dropdown-item" href="#">Outdoor and Adventure</a>
+                  </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="/History.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact">ContactUs</a>
+                </li>
+                <!-- <li class="nav-item"> -->
+                  <!-- <a class="nav-link" href="#">SignIn|Sign </a> -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Register
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="login">Login</a>
+                      <a class="dropdown-item" href="signup">Signup</a>
+                      
+                  </li>
+                <!-- </li> -->
+              </ul>
+            </div>
+            <form class="form-inline">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="search-icon"><i class="fa fa-search"></i></button>
+            </form>
+            <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("input").toggle();
+                });
+              });
+              </script>
+          </nav>
+       
+    <!--   *******************SLIDING IMAGES IN A SECOND*****************************-->
+    <section id="slick"> 
+      <div class="col-lg-12"> 
+          <div class="slider-content"> 
+    <!-- --------------------------- item 1  ---------------------- --> 
+            <li class="item-a"> 
+               
+                  <div class="slide-img"> 
+                      <img src="./Image/danakil depression.jpg" alt="dankil depression"> 
+                    </div>  
+              </li> 
+               
+     <!----------------------------- item 2    ------------------------> 
+     
+    <li class="item-b"> 
+          <div class="slide-img"> 
+            <img src="./Image/lalibela.jpg" alt="image not found"> 
+          </div>  
+      </li> 
+     
+    <!------------------------------item 3 ---------------------------> 
+    <li class="item-c"> 
+      <div class="slide-img"> 
+          <img src="./Image/simien.jpg" alt="gonder"> 
+         
+      </div>  
+    </li> 
+    <!-----------------------------item 4-----------------------------> 
+    <li class="item-c"> 
+      <div class="slide-img"> 
+          <img src="./Image/timiket.jpg" alt="Timiket"> 
+         
+      </div>  
+    </li> 
+  </div>
+</div>
+        
+        </section> 
+        <!-- this for previous and next arrow and for carousel --> 
+        <div class="arrow_prev"> 
+          <span><i class="fa-solid fa-angles-left"></i></span> 
+         </div> 
+         <div class="arrow_next"> 
+           <span><i class="fa-solid fa-angles-right"></i></span> 
+          </div> 
+      <script 
+                src="https://code.jquery.com/jquery-3.6.0.min.js" 
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+                crossorigin="anonymous"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
+      <script> 
+          $('.slider-content').slick({ 
+     prevArrow: '.arrow_prev',   
+     nextArrow: '.arrow_next', 
+    dots: false, 
+    infinite: true, 
+    autoplay: true, 
+    speed: 100, 
+    slidesToShow: 1, 
+    slidesToScroll: 1, 
+    responsive: [ 
+      { 
+        breakpoint: 1024, 
+        settings: { 
+          slidesToShow: 1, 
+          slidesToScroll: 1, 
+          infinite: true, 
+          autoplay: true, 
+          dots: false 
+        } 
+      }, 
+      { 
+        breakpoint: 600, 
+        settings: { 
+          slidesToShow: 1, 
+          slidesToScroll: 1, 
+          autoplay: true, 
+        } 
+      }, 
+      { 
+        breakpoint: 480, 
+        settings: { 
+          slidesToShow: 1, 
+          slidesToScroll: 1, 
+          autoplay: true, 
+        } 
+      } 
+       
+    ] 
+    }); 
+      </script> 
+       
+         <!-- this for previous and next arrow and for carousel --> 
+     
+    <script> 
+     
+     
+     function myFunction(obj) { 
+     
+     
+      var allDropDowns = document.querySelectorAll(".dropdown-content");  
+      for(let i = 0; i < allDropDowns.length; i++){ 
+     
+        obj.parentElement.querySelector(".dropdown-content").classList.add("show"); 
+        let myArray = Array.from(allDropDowns); // Creating an array from a node list. 
+     
+        let index = myArray.indexOf(obj.parentElement.querySelector(".dropdown-content")); 
+         
+        if(i == index) continue; 
+        if (allDropDowns[i].classList.contains('show')) { 
+          allDropDowns[i].classList.remove('show'); 
+        } 
+     
+      }   
+     }
+     </script>
+    
+  <!--**********************discover Ethiopia ***************************************-->
+
+    <div class="container-fluid ">
+      <div>
+      <h1 class="text-center">Discover Ethiopia</h1>
+      <hr class="line">
+       <p align="jsutify" class="discover ">Ethiopia is a country located in the Horn of Africa. It is the second-most populous country
+         in Africa and the 13th-most populous country in the world. The country has a diverse population 
+         with over 80 ethnic groups and over 80 languages spoken. Ethiopia is known for its ancient history 
+         and rich culture, including the remains of the ancient kingdom of Aksum and the rock-hewn churches of
+          Lalibela. It is also known for its coffee, which is an important export for the country. Ethiopia has a 
+          rich history of resistance against colonialism, and it was the only African country never to be colonized by a European power.
+         The current capital city of Ethiopia is Addis Ababa.</p>
+        </div>
+        </div>
+   
+
+
+
+
+    <!---------------------------------Testimonials---------------------------------------------->
+
+      <div class="container-fluid 10">
+        <h1 class="text-center">Testimonial</h1>
+        <hr class="line">
+        <h2 class="text-center " > Hear what others say about Ethiopia</h2>
+        <div class="d-flex justify-content-center">
+        <video width="320" height="240" controls autoplay loop>
+          <source src="your-video-file.mp4" type="video/mp4">
+          <source src="your-video-file.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    
+      </div>
+
+
+
+
+
+    
+     <!-- *******************Overview******************************-->
+     <div id="place">
+      <div class="container-fluid">
+            <h1 class="sub-title">Things to do</h1>
+            <hr class="line">
+            <div class="place-list">
+
+              <div class="placess">
+                  <img src="./Image/timiket.jpg" alt="lalibela">
+                  <div class="layer">
+                      <h3>Timiket</h3>
+                        <p>
+                          Epiphany, also known as Timkat, is a major holiday in Ethiopia celebrated by the Ethiopian Orthodox Tewahedo Church on January 19th. The holiday commemorates the 
+                
+                        </p>
+                        <a href="timiket.html"><i><i class="fa-sharp fa-solid fa-up-right-from-square"></i></i></a>
+                  </div>
+              </div>
+              <div class="placess">
+                  <img src="./Image/afar.jpg" alt="ereta Ale">
+                  <div class="layer">
+                      <h3>Ereta Ale Volcano</h3>
+                        <p>
+                          Erta Ale is an active volcano located in Ethiopia. It is  continuously erupting lava lakes in the world.
+                        </p>
+                        <a href="eretale.html"><i><i class="fa-sharp fa-solid fa-up-right-from-square"></i></i></a>
+                  </div>
+              </div>
+              <div class="placess">
+                  <img src="./Image/omo.jpg" alt="omo">
+                  <div class="layer">
+                      <h3>Omo culture</h3>
+                        <p>
+                          The Omo Valley is a region in southern Ethiopia known for its diverse ethnic groups, unique cultural practices. 
+              
+                        </p>
+                        <a href="Omo.html"><i><i class="fa-sharp fa-solid fa-up-right-from-square"></i></i></a>
+                  </div>
+              </div>
+            </div> 
+          
+      </div>
+ </div>
+
+    
+    <!-- *******************Overview******************************-->
+    <div id="place">
+      <div class="container-fluid">
+            <div class="place-list">
+
+              <div class="placess">
+                  <img src="./Image/axum.jpg" alt="lalibela">
+                  <div class="layer">
+                      <h3>Timiket</h3>
+                        <p>
+                          Epiphany, also known as Timkat, is a major holiday in Ethiopia celebrated by the Ethiopian Orthodox Tewahedo Church on January 19th. The holiday commemorates the 
+                
+                        </p>
+                        <a href=""><i><i class="fa-sharp fa-solid fa-up-right-from-square"></i></i></a>
+                  </div>
+              </div>
+              <div class="placess">
+                  <img src="./Image/gonder.jpg" alt="ereta Ale">
+                  <div class="layer">
+                      <h3>Ereta Ale Volcano</h3>
+                        <p>
+                          Erta Ale is an active volcano located in Ethiopia. It is  continuously erupting lava lakes in the world.
+                        </p>
+                        <a href="#"><i><i class="fa-sharp fa-solid fa-up-right-from-square"></i></i></a>
+                  </div>
+              </div>
+              <div class="placess">
+                  <img src="./Image/nile.jpg" alt="omo">
+                  <div class="layer">
+                      <h3>Omo culture</h3>
+                        <p>
+                          The Omo Valley is a region in southern Ethiopia known for its diverse ethnic groups, unique cultural practices. 
+              
+                        </p>
+                        <a href="#"><i><i class="fa-sharp fa-solid fa-up-right-from-square"></i></i></a>
+                  </div>
+              </div>
+            </div> 
+          
+      </div>
+ </div>
+
+
+
+
+
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h3>Explore Ethiopia</h3>
+          <ul>
+            <li><a href="#">Things to do</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Stopover</a></li>
+            <li><a href="#">Plan your trip</a></li>
+            <li><a href="#">About Ethiopia</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h3>Plan your visit</h3>
+          <ul>
+            <li><a href="#">Apply for Visa</a></li>
+            <li><a href="#">Reserve a hotel</a></li>
+            <li><a href="#">meet a guide </a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Weather</a></li>
+          </ul>
+          
+        </div>
+        <div class="col-sm-3">
+          <h3>Contact Us</h3>
+          <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li>
+            <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+              <label for="message">Leave a message:</label>
+              <textarea id="message" name="message" rows="4" cols="30"></textarea>
+              <input type="submit" value="Send">
+            </form>
+          </li>
+        </ul>
+        </div>
+      </div>
+       <form>
+        <label for="email">Subscribe to our newsletter:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit" value="Subscribe">
+      </form> 
+       <script>
+       const form = document.querySelector("form");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const email = form.email.value;
+          // Add code here to send the email to your newsletter service
+          alert(`Thank you for subscribing with ${email}`);
+        });
+      </script>          
+
+    </div>
+   
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; Team 3  2023</p>
+</div>
+
+  </div>
+</body>
+</html>

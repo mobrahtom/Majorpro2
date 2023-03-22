@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: white;
+    position: relative;
+}
+.dalol{
+    width: 60%;
+    
+}
+.axum{
+    width: 60%;
+    height: 20%;
+}
+.adwa{
+    width: 75%;
+}
+h1{
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    color: #345678;
+}
+.hareri{
+    width: 60%;
+    margin-left: 300px;
+}
+.ire{
+    width: 60%;
+    margin-left: 300px;
+    
+}
+p{
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    justify-content: center;
+    text-align: justify;
+    padding: 10px 40px 40px 40px;
+    margin-right: 10%;
+}
+img{
+    margin-left: 85px;
+}
+.ashenda{
+    width: 90%;
+}
+.lucy{
+    width: 20%;
+   
+   
+}

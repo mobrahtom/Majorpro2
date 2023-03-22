@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<meta lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footter</title>
+<style>
+    /* -------------------------CSS for FOOTTER Part-----------------------------*/
+    footer {
+      background: rgb(101, 101, 250); 
+      /* color: white; */
+      display: flex;
+      justify-content: space-between;
+      padding: 4px;
+      position: relative;
+      bottom: 0;
+      width: 102%;
+      height: auto;
+    }
+    
+    footer h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    footer ul li {
+      padding: 5px;
+      margin: 10px;
+    }
+    
+    footer ul li a {
+      color: white; 
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+     
+    }
+    
+    footer ul li a:hover {
+       color: #ddd; 
+    }
+    
+    .social-icons li {
+      display: inline-block;
+      padding: 2px; 
+      transition: 0.5s;
+      transform: scale(1.2);
+    }
+    
+    .social-icons li a {
+      color: white; 
+      font-size: 20px;
+    }
+    
+    .social-icons li a:hover {
+       color: #ddd; 
+      transition: 0.5s;
+      transform: scale(1.5);
+    }
+    
+    /* styles for the contact us section */
+    footer h3.contact-us {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    
+    footer form {
+      /* styles for the form element */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    footer form label {
+      /* styles for the form label */
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+    
+    footer form textarea {
+      /* styles for the textarea element */
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      resize: none;
+      font-size: 1.2rem;
+    }
+    
+    footer form input[type="submit"] {
+      /* styles for the submit button */
+      background-color: rgb(161, 161, 245); 
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    
+    footer form input[type="submit"]:hover {
+      /* styles for the submit button on hover */
+      background-color: #ddd;
+      color: green;
+    }
+    /* styles for the copyright section */
+    .copyright {
+      text-align: center;
+      padding: 10px 0;
+      background:linear-gradient(green,yellow,red);
+      color: blue;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      width:102%
+    }
+    
+    .copyright a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+    
+    .copyright a:hover {
+      color: #ddd;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    input[type="email"] {
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+</style>
+</head>
+<body>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h3>Explore Ethiopia</h3>
+          <ul>
+            <li><a href="#">Things to do</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Stopover</a></li>
+            <li><a href="#">Plan your trip</a></li>
+            <li><a href="#">About Ethiopia</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h3>Plan your visit</h3>
+          <ul>
+            <li><a href="#">Apply for Visa</a></li>
+            <li><a href="#">Reserve a hotel</a></li>
+            <li><a href="#">meet a guide </a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Weather</a></li>
+          </ul>
+          
+        </div>
+        <div class="col-sm-3">
+          <h3>Contact Us</h3>
+          <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li>
+            <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+              <label for="message">Leave a message:</label>
+              <textarea id="message" name="message" rows="4" cols="30"></textarea>
+              <input type="submit" value="Send">
+            </form>
+          </li>
+        </ul>
+        </div>
+      </div>
+       <form>
+        <label for="email">Subscribe to our newsletter:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit" value="Subscribe">
+      </form> 
+       <script>
+       const form = document.querySelector("form");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const email = form.email.value;
+          // Add code here to send the email to your newsletter service
+          alert(`Thank you for subscribing with ${email}`);
+        });
+      </script>          
+
+    </div>
+   
+  </footer>
+  <div class="copyright">
+    <p>Copyright &copy; Team 3  2023</p>
+</div>
+</body>
+</html>
