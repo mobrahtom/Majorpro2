@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <script src="https://kit.fontawesome.com/a1aef83858.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/culturalSouth.css">
+    <title>Cultural South</title>
+</head>
+<body>
+    <!-- for navigation bar  -->
+    <nav></nav>
+
+    <!-- for carousel slider images -->
+    <section id="slick">
+        <div class="col-lg-12">
+            <div class="slider-content">
+              <!-- --------------------------- item 1 ---------------------- -->
+              <li class="item-a">
+                
+                    <div class="slide-img">
+                        <img src="./Image/pictures/photo/unity-park.jpg" alt="unity-park">
+                      </div>	
+                </li>
+                
+            
+      
+       <!----------------------------- item 2    ------------------------>
+      
+      <li class="item-b">
+            <div class="slide-img">
+                <img src="./Image/pictures/photo/arbaminch.jpg" alt="arbaminch">
+              
+            </div>	
+        </li>
+      
+      <!------------------------------item 3 --------------------------->
+      <li class="item-c">
+        <div class="slide-img">
+            <img src="./Image/pictures/photo/mango park.jpg" alt="mango">
+          
+        </div>	
+      </li>
+      <!-----------------------------item 4----------------------------->
+      <li class="item-c">
+        <div class="slide-img">
+            <img src="./Image/pictures/photo/Lake Hawassa.jpg" alt="lake Hawassa">
+          
+        </div>	
+      </li>
+      <!---------------------------item 5----------------------------->
+      <li class="item-e">
+        <div class="slide-img">
+            <img src="./Image/pictures/photo/konso.jpg" alt="konso">
+          
+        </div>	
+      </li>
+      <!-----------------------------item 6----------------------------->
+      <li class="item-f">
+        <div class="slide-img">
+            <img src="./Image/pictures/photo/omo.png" alt="Omo">
+          
+        </div>	
+      </li>
+      <!-----------------------------item 7----------------------------->
+      <li class="item-g">
+        <div class="slide-img">
+            <img src="./Image/pictures/photo/jinka.jpg" alt="jinka">
+          
+        </div>	
+      </li>
+      
+      
+              </div>
+            </div>
+         
+          </section>
+          <!-- this for previous and next arrow and for carousel -->
+          <div class="arrow_prev">
+            <span><i class="fa-solid fa-angles-left"></i></span>
+           </div>
+           <div class="arrow_next">
+             <span><i class="fa-solid fa-angles-right"></i></span>
+            </div>
+        <script
+                  src="https://code.jquery.com/jquery-3.6.0.min.js"
+                  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+                  crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            $('.slider-content').slick({
+       prevArrow: '.arrow_prev',  
+       nextArrow: '.arrow_next',
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 100,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            autoplay: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+          }
+        }
+        
+      ]
+      });
+        </script>
+        <script>
+          $(document).ready(function(){
+            $(".wish-icon i").click(function(){
+              $(this).toggleClass("fa-heart fa-heart-o");
+            });
+          });	
+          </script>
+           <!-- this for previous and next arrow and for carousel -->
+      
+      <script>
+      
+      
+       function myFunction(obj) {
+      
+      
+        var allDropDowns = document.querySelectorAll(".dropdown-content"); 
+        for(let i = 0; i < allDropDowns.length; i++){
+      
+          obj.parentElement.querySelector(".dropdown-content").classList.add("show");
+          let myArray = Array.from(allDropDowns); // Creating an array from a node list.
+      
+          let index = myArray.indexOf(obj.parentElement.querySelector(".dropdown-content"));
+          
+          if(i == index) continue;
+          if (allDropDowns[i].classList.contains('show')) {
+            allDropDowns[i].classList.remove('show');
+          }
+      
+        }
+       }
+      
+      
+       </script> 
+
+    <!-- for embraced division -->
+    <div>
+
+        <!-- for box one -->
+        <div class="box"> 
+            <a href="lakeHawassa">
+           <img src="./Image/pictures/photo/Lake Hawassa.jpg" alt="Lake Hawassa"> <h2 style="text-align: center;">Lake Hawassa</h2>
+            <p align = "justify" class="text">
+                A picturesque crater lake surrounded by forests, known for its 
+                rich birdlife and opportunities for fishing and boating.</p>
+                </a>
+        </div>
+
+        <!-- for box two -->
+        <div class="box">
+            <a href="konso">
+            <img src="./Image/pictures/photo/konso.jpg" alt="Konso"> <h2 style="text-align: center;">Konso</h2>
+            <p align = "justify" class="text">A UNESCO World Heritage site recognized for its traditional terraced 
+                landscapes and indigenous cultural practices.</p>
+             </a>
+        </div>
+
+        <!-- for box three -->
+        <div class="box">
+            <a href="omoPark">
+            <img src="./Image/pictures/photo/omo.png" alt="omo"> <h2 style="text-align: center;">Omo</h2>
+            <p align = "justify" class="text"> A large wilderness area in southern Ethiopia, home to a variety of wildlife, 
+                including elephants, lions, and hippos, as well as several indigenous tribes 
+                such as the Mursi and the Hamar.</p>
+                </a>
+        </div>
+
+        <!-- for box four -->
+        <div class="box">
+            <a href="mangoPark">
+            <img src="./Image/pictures/photo/mango park.jpg" alt="mango"> <h2 style="text-align: center;">Mango</h2>
+            <p align = "justify" class="text">Another UNESCO World Heritage site, this park is home to a large population of 
+                elephants and other wildlife, as well as several indigenous communities, including 
+                the Mursi and Banna tribes.</p>
+        </div>
+
+        <!-- for box five  -->
+        <div class="box">
+            <a href="arbaminch">
+            <img src="./Image/pictures/photo/arbaminch.jpg" alt="arbaminch"> <h2 style="text-align: center;">Arba Minch</h2>
+            <p align = "justify" class="text">A scenic town located at the foothills of the Chercher Mountains, known for its twin 
+                lakes, abundant birdlife, and access to nearby natural and cultural attractions, 
+                such as the Nechisar National Park.</p>
+                </a>
+        </div>
+
+        <!-- for box six  -->
+        <div class="box">
+            <a href="jinka">
+            <img src="./Image/pictures/photo/jinka.jpg" alt="jinka"> <h2 style="text-align: center;">Jinka</h2>
+            <p align = "justify" class="text">A historic town located in the heart of the Lower Omo Valley, known for its markets, 
+                museums, and access to nearby indigenous communities, such as the Mursi, Hamar, and 
+                Karo tribes.</p>
+                </a>
+        </div>
+
+    </div>
+</body>
+</html>

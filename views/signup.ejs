@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="">
   <script src="https://kit.fontawesome.com/a1aef83858.js" crossorigin="anonymous"></script>
   <link
   rel="stylesheet"
@@ -23,7 +23,7 @@
 body{
   font-family: sans-serif;
   /* the above is additional */
-  background-color:  #98a630;
+  background:url('./Image/timiket.jpg')
 
 }
 .container{
@@ -111,27 +111,7 @@ form div i {
   position: absolute;
   padding: 10px;
 }
-/* 
-.success-icon,
-  .failure-icon {
-    right: 0;
-    opacity: 0;
-  }
-  
-  .failure-icon,
-  .error {
-    color: red;
-  }
-  
-  .success-icon {
-    color: green;
-  }
 
-  .error {
-    font-size: 14.5px;
-    margin-top: 5px;
-  } */
-  
    #checkbox {
     width: 20px;
     height: 20px;
@@ -178,12 +158,20 @@ form div i {
       padding: 20px;
     }
   }
+  .error {
+  color: red;
+  margin-top: 5px;
+}
+
   </style>
 </head>
 <body>
   <div class="container" id="myDiv">
+
     <h2>Sign Up</h2>
-  <form id="myform" action="signup" method="post">
+  <form id="myform" action="/signup" method="post">
+  
+   
     <div>
     <label for="firstname">First Name:</label>
     <i class="fas fa-user"></i>
@@ -440,13 +428,15 @@ form div i {
      <input type="password" id="password_confirm" name="password_confirm">
      <span id="passwordconfirmationlocation" style="color:red;"></span><br><br>
    </div>
-   
-  
+    
 
-   
-   <button type="submit" id="submit" onclick="expandDiv()">Register</button>
-   <br> <br><br>
-     Have already account <a href="login">Login here</a>
+  <!-- <label for="photo">Upload Photo:</label> 
+  <input type="file" id="photo" name="photo" accept="image/jpeg,image/jpg,image/png,application/pdf">
+  <span id="photolocation" style="color:red;"></span><br> -->
+
+   <!-- <input type="checkbox" id="checkbox">I accept terms and conditions of your site. <br><br> -->
+   <button type="submit" id="submit" onclick=" expandDiv()">Register</button> <br><br>
+     Have already account <a href="#">Login here</a>
     <!-- <input type="submit" value="Submit"> -->
   </form>
 </div>
@@ -490,9 +480,7 @@ form div i {
       status = false;
    }
 
-   if(!validatePhoto()) {
-       status = false;
-     }
+ 
 
     if(!status) {
       e.preventDefault(); // Prevent form submission if validation fails
@@ -663,29 +651,13 @@ function validatePasswordConfirm() {
        }
  }
 
- function validatePhoto() {
-       var photo = document.getElementById('photo');
-       var fileName = photo.value;
-       var extension = fileName.split('.').pop().toLowerCase();
-                  
-       if(fileName == "") {
-           document.getElementById("photolocation").innerHTML = "Please select a photo";
-           return false;
-       }
-       else if(!["jpeg", "jpg", "png", "pdf"].includes(extension)) {
-           document.getElementById("photolocation").innerHTML = "Please select a photo with a jpeg, jpg, png, or pdf extension";
-           return false;
-       }
-       else {
-           return true;
-       }
- }
-
  function expandDiv() {
   var div = document.getElementById("myDiv");
   div.style.width = "fit-content";
 }
 </script>
+
+  
   
 </body>
 </html>

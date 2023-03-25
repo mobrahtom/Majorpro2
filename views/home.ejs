@@ -10,20 +10,27 @@
   
 
   <style>
-    *{
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    
+.room{
+  background:url('./Image/camel.jpg');
+  box-sizing: border-box;
+ 
 }
 
 .container{
-    background-color: white;
+    
     overflow: hidden;
-    width: 100%;
+    width: 78%;
+    margin-right: 0;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    
 }
 .filterDiv{
     float: right;
    color: black;
-   width: 80%;
+   margin-left: 120px;
    text-align: center;
    margin: 2px;
    display: none;
@@ -140,24 +147,118 @@ margin-bottom: 5px;
   }
 
   /* css for info page*/
-  .info-page{
-    width:100%;
-    background: white;
-  }
-  .form-group{
-    display: flex;
-  }
-  .form-group label{
-    width: 20%;
-  }
-  .form-group input{
-    width:50%;
-  }
-  .error{
-    color:red;
-    display: none;
-  }
+  .row {
+  display: flex;
+  justify-content: center;
 
+  height: 90vh;
+}
+
+.info-page {
+  width: 500px;
+  margin-left: -100px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  height: auto;
+}
+
+.header {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: -70%;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 70%;
+  margin-left: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+
+
+
+  /* css for Destination*/
+
+    .Destination {
+      color: red;
+    }
+
+        ol#places {
+            list-style-type: none;
+            display: block;
+             
+        }
+        ol#plces li h2{
+            width:auto;
+            align-items: center;
+            padding-bottom: 10px;
+            color: red;
+        }
+
+        ol#places li img {
+            width: 100%;
+            height: 450px;
+            margin: 10px 0;
+            padding-top: 5px;
+        }
+
+        ol#places li p {
+           width: 100%;
+            display: inline-block;
+    
+        }
+        ol#places {
+            display: flex;
+            flex-direction: column;
+            flex-wrap:nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ol#places li {
+           
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+        }
+
+   
+
+    
 
   /* Css for Visa page*/
 
@@ -165,7 +266,7 @@ margin-bottom: 5px;
     background: url("./Image/visa.jpg");
     width:100%;
     height: 460px;
-    margin-top: 80px;
+    
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -189,10 +290,55 @@ p{
 .btn a{
     color: white;
 }
-
+.logout{
+  position: relative;
+  float: right;
+  right:10px;
+  margin-top: -50px;
+  background-color: red;
   
+}
 
-  
+
+/* CSS For reccomendation page*/
+
+#header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        overflow: hidden;
+        width: 300px;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card h3 {
+        margin: 10px;
+      }
+
+      .card p {
+        margin: 10px;
+      }
+    
   </style>
   
   <script >
@@ -250,15 +396,16 @@ function myFunction() {
 
   </script>
 </head>
-<body>
+<body class="room">
   
   <header class="bar">
     
     <img src="./Image/logo.png" alt="Logo">
-    <div class="icon">
-    <i class="fa-sharp fa-solid fa-heart"></i>
-  </div>
-    <button class="btn btn-red btn defualt log">logout</button>
+    
+  <form action="/logout" method="POST">
+    <button class="btn btn-red logout" type="submit"  >Logout</button>
+
+  </form>
 
   </header>
 
@@ -266,13 +413,14 @@ function myFunction() {
   <div id="filter">
    <!-- <button class="btn active" onclick="filterSelection('all')"><i class="fa-solid fa-chart-simple"></i> Dashboard</button>--> 
     <button class="btn" onclick="filterSelection('info')"><i class="fa-solid fa-circle-info"></i> Information</button>
-    <button class="btn" onclick="filterSelection('destination')"><i class="fa-solid fa-location-dot"></i> Destination</button>
+
     <button class="btn" onclick="filterSelection('visa')"><i class="fa-brands fa-cc-visa"></i> Apply Visa </button>
-    <button class="btn" onclick="filterSelection('hotel')"><i class="fa-solid fa-hotel"></i> Order Hotel</button>
+    <!--<button class="btn" onclick="filterSelection('hotel')"><i class="fa-solid fa-hotel"></i> Order Hotel</button>-->
     <button class="btn" onclick="filterSelection('guide')"><i class="fa-solid fa-person"></i> Order Guide</button>
     <button class="btn" onclick="filterSelection('flight')"><i class="fa-solid fa-plane"></i> Book flight</button>
+    <button class="btn" onclick="filterSelection('destination')"><i class="fa-solid fa-location-dot"></i> Destination</button>
     <button class="btn" onclick="filterSelection('recommend')"><i class="fa-solid fa-landmark"></i>  Recommended</button>
-    <button class="btn" onclick="filterSelection('wish')"> <i class="fa-solid fa-heart"></i> My wishList</button>
+    <!-- <button class="btn" onclick="filterSelection('wish')"> <i class="fa-solid fa-heart"></i> My wishList</button> -->
 
   </div>
 
@@ -282,49 +430,35 @@ function myFunction() {
 <div class="container">
   
   <div class=" filterDiv info">
-    <div class="row">
-      
-      <h2 class="text-center header">Edit Infomrmation</h2>
-      <div class="profile-box">
-      <div class="col-md-3  well"id="photo_box">
-        <img src="#" class="rounded-circle mx-auto img-fluid" alt="Profile Picture">
-        <i class="fa-solid fa-cloud-arrow-up"></i>
-      </div>
-      <div class="desc">
-        <button class="btn btn-primary">Choose file</button>
-        <p>  Update your profile</p>
-      </div>
-      
-    </div>
-  </div>
+
 
     <div class="row">
       <div class="info-page">
         <h2 class="header">Account information</h2>
-        <form id="profileForm">
+        <form id="profileForm" action="/update"method="post">
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" value="John">
+            <input type="text" class="form-control" id="firstName"  name="fname" required>
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" value="Doe">
+            <input type="text" class="form-control" id="lastName" name="lname" required>
           </div>
           <h2 class="header"> Change Password</h2>
-          <div class="form-group">
+          <!-- <div class="form-group"> -->
             
-            <label for="oldPassword">Old Password</label>
-            <input type="password" class="form-control" id="oldPassword">
+            <!-- <label for="oldPassword">Old Password</label>
+            <input type="password" class="form-control" id="oldPassword" name="password">
             <span class="error" id="oldPasswordError"></span>
-          </div>
+          </div> -->
           <div class="form-group">
             <label for="newPassword">New Password</label>
-            <input type="password" class="form-control" id="newPassword">
+            <input type="password" class="form-control" id="newPassword" name="newPass" required>
             <span class="error" id="newPasswordError"></span>
           </div>
           <div class="form-group">
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword">
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPass" required>
             <span class="error" id="confirmPasswordError"></span>
           </div>
           <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -337,12 +471,150 @@ function myFunction() {
 
 
 
- <div class=" filterDiv destination">
+<div class=" filterDiv destination">
 
-  <!-- Sample-->
-  <p> sample</p>
- </div>
+      
+      <div class="container">
+        <h1>Top Ten Places to Visit in Ethiopia</h1> <br>
+          <ol id="places">
+            <!-- list items -->
+        <li>
+          <h2>The Rock-Hewn Churches of Lalibela</h2>
+          <p align = "justify">Lalibela is a town in northern Ethiopia known for its rock-hewn churches,
+               which were carved out of solid rock in the 12th and 13th century by King
+               Lalibela of the Zagwe dynasty. These churches are considered some of the most
+               remarkable examples of Ethiopian religious architecture and are a UNESCO World 
+               Heritage Site. </p>
+          <img src="./Image/lalibela.jpg" alt="The Rock-Hewn Churches of Lalibela">
+         
+        </li>
+        <li>
+          <h2>Simien Mountains National Park</h2>
+          <p align = "justify">
+              The Simien Mountains National Park, located in northern Ethiopia, 
+              is a UNESCO World Heritage Site known for its rugged landscapes, diverse wildlife,
+               and stunning views. The park is home to the Simien Mountains, which are a part of the 
+               Ethiopian Highlands and reach heights of up to 4,543 meters (14,928 feet) at Ras Dashen, 
+               the highest peak in Ethiopia. 
+               
+          <img src="./Image/simien.jpg" alt="Simien Mountains National Park">
+          
+        </li>
+        <li>
+          <h2>Aksum</h2>
+          <p align = "justify">
+              Axum is an ancient city located in the Tigray region of northern Ethiopia.
+               It is considered one of the most important historical and cultural sites in Ethiopia, 
+               and is known for its ancient stelae, or obelisks, which are considered some of the most significant
+                examples of Ethiopian art and architecture. The stelae are believed to have been erected in the 4th century AD and are some of the tallest monolithic statues in the world.
+  
+               Axum was once the capital of the powerful Aksumite Empire, 
+          </p>
+          <img src="./Image/axum.jpg" alt="Aksum">
+       
+        </li>
+        <li>
+          <h2>The Blue Nile Falls</h2>
+          <p align = "justify">
+              The Blue Nile Falls, also known as Tis Abay in Ethiopia, is a waterfall located on
+               the Blue Nile River, which is one of the main tributaries of the Nile River. 
+               The waterfall is located in the Amhara region of northern Ethiopia, about 30 km downstream 
+               from the city of Bahir Dar. The Blue Nile Falls is one of the most spectacular and beautiful
+                waterfalls in Ethiopia, known for its powerful and consistent flow of water. 
+  
+
+          </p>
+          <img src="./Image/nile.jpg" alt="The Blue Nile Falls">
+          
+        </li>
+        <li>
+          <h2>Gondar</h2>
+          <p align = "justify">
+              Gonder is a city located in the Amhara region of cultural significance and is sometimes referred to as the "Camelot of Africa." The city is known for its well-preserved 17th and 18th century castles and palaces, which were built during the reign of the Ethiopian emperors of the Zemene Mesafint period. These castles and palaces are considered some of the most significant examples of Ethiopian architecture and are a UNESCO World Heritage site.
+  
+            The most famous buildings in Gonder are the Royal Enclosure.
+          </p>
+          <img src="./Image/gonder.jpg" alt="Gondar">
+        
+        </li>
+        <li>
+          <h2>Danakil Depression</h2>
+          <p align = "justify" >
+              The Danakil Depression is a desert landscape located in the Afar region of northeastern Ethiopia. It is considered one of the lowest and hottest places on Earth and is known for its unique geological features, including salt mines, volcanic activity, and hot springs. The depression is also home to several active volcanoes, such as Erta Ale, and is considered one of the most active volcanic regions in the world.
+  
+  
+          </p>
+          <img src="./Image/danakil depression.jpg" alt="Danakil Depression">
+          
+        </li>
+        <li>
+          <h2>Harar Jugol</h2>
+          <p align = "justify">
+              Harar Jugol is a fortified historical city located in eastern Ethiopia. It is considered one of the most important Islamic cultural sites in Africa and is a UNESCO World Heritage Site. The city was founded in the 7th century and was a major center of Islamic culture and learning in the medieval period. The city is known for its many mosques, shrines, and traditional houses, many of which date back to the 16th century.
+  
  
+          </p>
+          <img src="./Image/jegol.jpg" alt="Harar Jugol">
+          
+        </li>
+        <li>
+          <h2>Lake Tana Monasteries</h2>
+          <p align = "justify">
+              Lake Tana is the largest lake in Ethiopia and is located in the northwest of the country. It is known for its monasteries, which are situated on several islands in the lake. The monasteries are considered some of the most important religious sites in Ethiopia and are an important pilgrimage destination for Ethiopian Orthodox Christians.
+  
+  
+          </p>
+          <img src="./Image/tana.jpg" alt="Lake Tana Monasteries">
+          
+        </li>
+        <li>
+          <h2>Erta Ale Volcano</h2>
+          <p align = "justify">
+              Erta Ale is an active volcano located in the Afar region of northeastern Ethiopia. It is 
+              considered one of the most active volcanoes in the world and is known for its persistent 
+              lava lake. The volcano has a height of 613 meters (2,011 feet) and is situated in the Danakil
+               Depression, one of the lowest and hottest places on Earth. The volcano is also considered 
+               as one of the most accessible lava lakes in the world.
+  
+              
+          <img src="./Image/erita ale.jpg" alt="Erta Ale Volcano">
+          
+        </li> 
+        <li>
+          <h2>Omo Valley</h2>
+          <p align = "justify">
+              The Omo Valley is a region in southern Ethiopia known for its diverse cultures 
+              and traditional way of life. The valley is home to several different ethnic groups, 
+              each with their own distinct customs, languages, and ways of life. The Omo Valley is 
+              particularly famous for its remote and isolated tribes, such as the Mursi, Surma, and Hamer
+               tribes. These tribes are known for their unique customs and traditions, including body 
+               painting, scarification, and lip plates worn by the women.
+  
+              
+          <img src="./Image/omo.jpg" alt="Omo Valley">
+          
+        </li>
+      </ol>
+      </div>
+      <script >
+           let places = document.getElementById("places");
+  
+      for (let i = 0; i < places.children.length; i++) {
+          let place = places.children[i];
+          place.addEventListener("mouseover", function() {
+           place.style.backgroundColor = "lightblue";
+      });
+      place.addEventListener("mouseout", function() {
+          place.style.backgroundColor = "white";
+       });
+      }
+  
+      </script>
+    </div>
+    
+    
+    
+  
  <div class="filterDiv visa">
 
   <div class=" row imageBox ">
@@ -357,17 +629,10 @@ function myFunction() {
 
     Ethiopian Visa can be collected at Ethiopian Embassies and consulates abroad or on Arrival. Right now visa can be obtained with an online application. Check <a href="https://www.evisa.gov.et/">this link </a> for all visa-related details and to apply for an online Visa.<p>
         </p>
-        <button class="btn btn-default btn-primary"><a href="https://www.evisa.gov.et/">Apply online</a></button>
+        <button class="btn btn-default btn-primary" style="margin-right: 150px; margin-top: -30px;"><a href="https://www.evisa.gov.et/">Apply online</a></button>
     </div>
  </div>
 
- 
-
- <div class=" filterDiv hotel">
-
-  <!-- Sample-->
-  <p> hotel sample</p>
- </div>
 
 
  
@@ -391,7 +656,7 @@ function myFunction() {
  </div>
 
  <div class="filterDiv flight">
-  <div class=" row imageBox " style="background: url('./Image/guide.webp');">
+  <div class=" row imageBox " style="background: url('./Image/plane.webp'); background-size: 100%; background-repeat: no-repeat;">
     <h2>Get your Flight ticket</h2>
     </div>
 
@@ -405,15 +670,56 @@ function myFunction() {
     </div>
  </div>
 
-
  <div class=" filterDiv recommend">
+ 
+  
+    <header id="header">
+      <h1>Recommended Places to Visit</h1>
+    </header>
+    <div id="content"></div>
+    <script>
+      // Sample data for recommended places to visit
+      const recommendedPlaces = [
+        {
+          name: "Lalibela, Ethiopia",
+          image: "C:\Users\SmArT\Downloads\Cultural south-20230324T181934Z-001\Cultural south\photo\arbaminch",
+          description:
+            "Experience the romance and charm of Lalibela, with its iconic landmarks like the Rock hewn ",
+        },
+        {
+          name: "Gonder",
+          image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.atlasobscura.com%2Fplaces%2Ferta-ale&psig=AOvVaw13oO6m-js8a_KyiZtcOtyn&ust=1679800631114000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDWiZGP9v0CFQAAAAAdAAAAABAE",
+          description:
+            "Discover the vibrant energy and unique culture of Gonder, from its bustling streets to its serene gardens.",
+        },
+        {
+          name: "Axum",
+          image: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F69%2FRome_Stele.jpg%2F1200px-Rome_Stele.jpg&tbnid=UzuI9J4wLP9oAM&vet=12ahUKEwii-bCyj_b9AhWJ2HMBHYLSD1sQMygCegUIARDpAQ..i&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FObelisk_of_Axum&docid=IAPDQl-nVPPpFM&w=1200&h=1600&q=axum%20ethiopia&ved=2ahUKEwii-bCyj_b9AhWJ2HMBHYLSD1sQMygCegUIARDpAQ",
+          description:
+            "Explore the colorful architecture, delicious food, and lively nightlife of Axum.",
+        },
+      ];
 
-  <h1>Recomendation</h1>
- </div>
+      // Create cards for recommended places
+      const contentDiv = document.getElementById("content");
+      recommendedPlaces.forEach((place) => {
+        const cardDiv = document.createElement("div");
+        cardDiv.className = "card";
+        const image = document.createElement("img");
+        image.src = place.image;
+        const title = document.createElement("h3");
+        title.textContent = place.name;
+        const description = document.createElement("p");
+        description.textContent = place.description;
+        cardDiv.appendChild(image);
+        cardDiv.appendChild(title);
+        cardDiv.appendChild(description);
+        contentDiv.appendChild(cardDiv);
+      });
+    </script>
+ 
 
- <div class=" filterDiv wish">
-
-  <h1>wishList</h1>
+  
  </div>
 
  

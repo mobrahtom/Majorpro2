@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Guidance</title>
-    <link rel="stylesheet" href="../public/css/culture.css">
+    <link rel="stylesheet" href="./css/culture.css">
 </head>
 <body>
-    <iframe src="navbarr.html"></iframe>
+    <%- include('navbarr.ejs') %>
     <div class="container">
     <h1>UNIQUE HOLIDAYS and FESTIVALS in ETHIOPIA</h1>
    
@@ -36,7 +36,7 @@
     <h2>Enqutatash (Ethiopian New Year)</h2>
     <div class="container">
         <input type="checkbox" id="check">
-    <img src="../public/Image/enkutatash.jpg" class="images">
+    <img src="./Image/enkutatash.jpg" class="images">
     
     <p>
         Enkutatash is the name for the Ethiopian New Year and means “gift of jewels” in the Amharic 
@@ -63,7 +63,7 @@
     <h2>Timket (Epiphany)</h2>
     <div class="container">
         <input type="checkbox" id="tim">
-    <img src="../public/Image/Epiphany.jpg" class ="photo">
+    <img src="./Image/Epiphany.jpg" class ="photo">
     <p>
         Timkat is the Geez expression for the traditional celebration of Epiphany, commemorating 
         the baptism of Jesus Christ in the hands of John the Baptist at River Jordan. Epiphany 
@@ -126,7 +126,7 @@
      <h2>ASHENDA</h2>
      <div class="container">
      <input type="checkbox" id="ashe">
-     <img src="../public/Image/ashenda - Copy.jpg" class="images">
+     <img src="./Image/ashenda - Copy.jpg" class="images">
      <p>
         Ashenda is a unique religious and traditional festival celebrated every year in Tigray and 
         Amhara Regional States between 16 to 21 August. Ashenda is a Tigrinya word meaning ‘’tall
@@ -218,7 +218,7 @@ excellent opportunity for promoting democracy in the sphere of culture.”
 
 <h2>GENA (ETHIOPIAN CHRISTMAS)</h2>
 <input type="checkbox" id="gena">
-<img src="../public/Image/genaa.jpg" class="images">
+<img src="./Image/genaa.jpg" class="images">
 <p>
 
 Christmas in Ethiopia is called Ganna (or Genna) and is celebrated on January 7th. An important Ethiopian holiday,
@@ -276,7 +276,7 @@ church and is where the priest serves the Holy Communion or Mass.
 <h2>MESKEL</h2>
 <div class="container">
     <input type="checkbox" id="mes">
-<img src="../public/Image/Tim2.jpg" class="photo">
+<img src="./Image/Tim2.jpg" class="photo">
 <P>
     Ethiopians have celebrated the annual festival of the Meskel (which means “cross” in Amharic),
     marking the finding of the “true cross” on which Jesus Christ was supposedly crucified.
@@ -308,7 +308,7 @@ Tourists are sure to have a wonderful time at the Meskel festival which reveals 
 
     
 <h2>FASIKA (EASTER)</h2>
-<img src="../public/Image/Easter.jpg" class="photo">
+<img src="./Image/Easter.jpg" class="photo">
 <p>
 
     “Fasika” is the Amharic word for Easter, and refers to the 55-days where Ethiopians celebrate 
@@ -322,7 +322,7 @@ one week longer than Western celebrations. Fasika sees all Christian denominatio
 including Orthodox, Catholic and Protestant, come together for a series of traditional services 
 and activities that take place just after Easter in the Western calendar.
 <h2>IRREECHA</h2>
-<img src="../public/Image/Erecha.jpg" class="photo">
+<img src="./Image/Erecha.jpg" class="photo">
 <P>
 
 In many countries of Africa traditional thanksgiving ceremonies are organized in each country with
@@ -342,7 +342,7 @@ create the heavens and the earth. The Oromos thank the Waka for good harvest, li
 peace among other things in their communities.
 </P>
 <h2>ADWA VICTORY</h2>
-<img src="../public/Image/Adwa - Copy.jpg" class="images">
+<img src="./Image/Adwa - Copy.jpg" class="images">
 <P>
 
     he actual battle which took place on March 1 and 2, 1896, at Adwa, the principal market town of
@@ -365,6 +365,6 @@ outnumbering and outperforming the invading Italian professional army of 17,000 
 </P>
 </div>
 </div>
-<iframe id="foot" src="footter.html"></iframe>
+<%- include('footer.ejs') %>
 </body>
 </html>

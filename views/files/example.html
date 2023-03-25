@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="">
   <script src="https://kit.fontawesome.com/a1aef83858.js" crossorigin="anonymous"></script>
   <link
   rel="stylesheet"
@@ -144,11 +144,11 @@ form div i {
     color: white;
     font-weight: bold;
     height: 40px;
-    width: 80%;
+    width: 40%;
     border-radius: 10px;
     cursor: pointer;
     border: none;
-    margin-left: 40px;
+    margin-left: 20%;
 }
 
 
@@ -442,11 +442,11 @@ form div i {
    </div>
     
 
-  <label for="photo">Upload Photo:</label> 
+  <!-- <label for="photo">Upload Photo:</label> 
   <input type="file" id="photo" name="photo" accept="image/jpeg,image/jpg,image/png,application/pdf">
-  <span id="photolocation" style="color:red;"></span><br>
+  <span id="photolocation" style="color:red;"></span><br> -->
 
-   <input type="checkbox" id="checkbox">I accept terms and conditions of your site. <br><br>
+   <!-- <input type="checkbox" id="checkbox">I accept terms and conditions of your site. <br><br> -->
    <button type="submit" id="submit" onclick=" expandDiv()">Register</button> <br><br>
      Have already account <a href="#">Login here</a>
     <!-- <input type="submit" value="Submit"> -->
@@ -492,9 +492,7 @@ form div i {
       status = false;
    }
 
-   if(!validatePhoto()) {
-       status = false;
-     }
+ 
 
     if(!status) {
       e.preventDefault(); // Prevent form submission if validation fails
@@ -662,24 +660,6 @@ function validatePasswordConfirm() {
       }
       else {
        return true;
-       }
- }
-
- function validatePhoto() {
-       var photo = document.getElementById('photo');
-       var fileName = photo.value;
-       var extension = fileName.split('.').pop().toLowerCase();
-                  
-       if(fileName == "") {
-           document.getElementById("photolocation").innerHTML = "Please select a photo";
-           return false;
-       }
-       else if(!["jpeg", "jpg", "png", "pdf"].includes(extension)) {
-           document.getElementById("photolocation").innerHTML = "Please select a photo with a jpeg, jpg, png, or pdf extension";
-           return false;
-       }
-       else {
-           return true;
        }
  }
 

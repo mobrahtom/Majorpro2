@@ -86,14 +86,7 @@ body{
     transition: width 0.3s ease-in-out;
   }
   
-  .search-icon {
-    position: relative;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 20px;
-    cursor: pointer;
-  }
+  
 
  
   @media (max-width: 767px) {
@@ -236,16 +229,6 @@ visibility: visible;
 
 
 
-/* --------------- CSS for Video testimonilas---------*/
-video {
-  position: relative;
-  overflow: hidden;
-  width: 80%; 
-  margin: 0 auto; 
-  height: auto;
- 
-
-}
 
 
 /*       CSS for Discover Ethiopia      */
