@@ -4,6 +4,7 @@ const info=require('../model/user')
 const bodyParser=require('body-parser');
 // router.use(bodyParser.urlencoded({ extended: true }));
 // router.use(bodyParser.json());
+
   
   router.post('/update', async (req, res) => {
     try {

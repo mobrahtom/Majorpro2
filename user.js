@@ -22,10 +22,12 @@ const signupUser= new mongoose.Schema({
         type:String,
         
     },
-    email:{
-        type:String,
-        
+     
+    email: {
+        type: String,
+        unique: true,   
     },
+    
     mobile:{
         type:Number,
         

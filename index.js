@@ -29,6 +29,29 @@ app.use(session({
 //app.use('/admin', adminRoutes);
 
 
+// hotel and room routes
+
+const  hotelsRoute = require("./routes/hotels");
+const  roomsRoute = require("./routes/rooms");
+
+
+// hotel routes
+
+app.use("/api/hotels", hotelsRoute);
+app.use("/api/rooms", roomsRoute);
+
+app.use((err, req, res, next) => {
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || "Something went wrong!";
+  return res.status(errorStatus).json({
+    success: false,
+    status: errorStatus,
+    message: errorMessage,
+    stack: err.stack,
+  });
+});
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -64,6 +87,10 @@ const {email, password}=req.body;
 
 app.get("/adminlogin", (req, res) => {
   res.render("adminlogin",{message:null});
+});
+
+app.get("/search", (req, res) => {
+  res.render("search",{message:null});
 });
 
 app.post('/adminlogout', (req, res) => {
@@ -172,7 +199,7 @@ app.get('/forgot-password', (req, res) => {
   
   
   app.get('/signup',function(req,res){
-    res.render('signup');
+    res.render('signup',{error:null});
   
   });
   
@@ -205,14 +232,22 @@ app.post('/logout', (req, res) => {
       errors.email = 'Please enter a valid email address';
     }
   
+    // Check if email is already registered
+  const existingUser = await collection.findOne({ email });
+  if (existingUser) {
+    return res.render('signup', { error: 'This Email is Already in Use!' });
+  }
+
+
+
     try {
       const user = new collection({ firstname, lastname, email, mobile, gender, dob, country, password });
       await user.save();
       res.render("login", {message:null});
-    } catch (err) {
-      console.log(err);
-      res.status(500).json({ message: 'Internal server error' });
     }
+    catch (err) {
+      res.render('signup',{error:err.message});
+  }
   });
     
  
@@ -224,7 +259,7 @@ app.post('/logout', (req, res) => {
       const user = await collection.findOne({ email });
   
       if (!user) {
-        res.status(401).render('login', { message: 'The user not found in the database' });
+        res.status(401).render('login', { message: 'The Username not found in the database' });
         return;
       }
   
@@ -237,7 +272,7 @@ app.post('/logout', (req, res) => {
       const isMatch = await bcrypt.compare(password, user.password);
   
       if (!isMatch) {
-        res.status(401).render('login', { message: 'You entered wrong password' });
+        res.status(401).render('login', { message: 'You Entered wrong password' });
         return;
       }
   

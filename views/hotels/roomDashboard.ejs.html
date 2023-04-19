@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Rooms</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		.edit-btn, .delete-btn {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 8px 16px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 14px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+
+		.delete-btn {
+			background-color: #f44336;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Hotel Rooms</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Price</th>
+				<th>Room Number</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+    <tbody>
+      <% rooms.forEach(function(room) { %>
+        <tr>
+          <td><%= room.title %></td>
+          <td><%= room.price %></td>
+          <td><%= room.roomNumber %></td>
+          <td><button class="edit-btn">Edit</button></td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+      <% }); %>
+    </tbody>
+	</table>
+
+</body>
+</html>

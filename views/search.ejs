@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+  </head>
+  <body>
+    <h1>Search Results</h1>
+    <% if (places.length > 0) { %>
+      <% places.forEach(function(place) { %>
+        <h2><%= place.name %></h2>
+        <p><strong>Location:</strong> <%= place.location %></p>
+        <p><%= place.description %></p>
+        <hr>
+      <% }) %>
+    <% } else { %>
+      <p>No results found.</p>
+    <% } %>
+  </body>
+</html>

@@ -161,6 +161,7 @@ form div i {
   .error {
   color: red;
   margin-top: 5px;
+  margin-left: 25%;
 }
 
   </style>
@@ -169,6 +170,8 @@ form div i {
   <div class="container" id="myDiv">
 
     <h2>Sign Up</h2>
+
+ 
   <form id="myform" action="/signup" method="post">
   
    
@@ -187,6 +190,9 @@ form div i {
   </div>
 
   <div> 
+    <% if (typeof error !== 'undefined') { %>
+      <div class="error"><%= error %></div>
+  <% } %>
     <label for="email">Email:</label>
     <i class="far fa-envelope"></i>
     <input type="text" id="email" name="email">
@@ -436,7 +442,7 @@ form div i {
 
    <!-- <input type="checkbox" id="checkbox">I accept terms and conditions of your site. <br><br> -->
    <button type="submit" id="submit" onclick=" expandDiv()">Register</button> <br><br>
-     Have already account <a href="#">Login here</a>
+     Have already account <a href="login">Login Here</a>
     <!-- <input type="submit" value="Submit"> -->
   </form>
 </div>
@@ -582,20 +588,21 @@ form div i {
         document.getElementById("dob_location").innerHTML = "Please enter your date of birth";
         return false;
     }
-            
-    var today = new Date();
+     var today = new Date();
     var birthdate = new Date(dob);
     var age = today.getFullYear() - birthdate.getFullYear();
     var m = today.getMonth() - birthdate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
         age--;
     }
-            
-    if (age < 15) {
+      if (age < 15) {
         document.getElementById("dob_location").innerHTML = "You must be at least 15 years old to register";
         return false;
     }
-            
+    if (age >99) {
+        document.getElementById("dob_location").innerHTML = "please enter valid birthdate";
+        return false;
+    }       
     return true;
 }
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add a new hotel</title>
+    <style>
+     /* Apply a common style to all form elements */
+form * {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Apply a specific style to form labels */
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the input fields */
+form input[type="text"], form input[type="number"], form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the submit button */
+form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the form header */
+form h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* Style the form container */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Add a new hotel</h1>
+    <form action="/api/hotels" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="type">Type:</label>
+      <select id="type" name="type">
+        <option value="hotel">Hotel</option>
+        <option value="motel">Motel</option>
+        <option value="resort">Resort</option>
+      </select>
+      
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+      
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+      
+      <label for="distance">Distance from city center:</label>
+      <input type="number" id="distance" name="distance" required>
+      
+      <!-- <label for="photos">Photos :</label>
+      <input type="text" id="photos" name="photos"> -->
+      
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+      
+      <label for="desc">Description:</label>
+      <textarea id="desc" name="desc" required></textarea>
+      
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" name="rating" min="1" max="5" required>
+      
+      <label for="rooms">Number of rooms:</label>
+      <input type="number" id="rooms" name="rooms" required>
+      
+      <label for="cheapestPrice">Cheapest price per night:</label>
+      <input type="number" id="cheapestPrice" name="cheapestPrice" required>
+      
+      <button type="submit">Add hotel</button>
+    </form>
+  </body>
+</html>

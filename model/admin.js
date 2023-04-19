@@ -15,6 +15,8 @@ const placeSchema = new mongoose.Schema({
   }
 });
 
+// Create a text index on the "description" field
+placeSchema.index({ description: 'text' });
 const Places = mongoose.model('Places', placeSchema);
 
 module.exports = Places;
